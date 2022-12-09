@@ -1,0 +1,123 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <title>Main page</title>
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="{% url 'homePage' %}" class="nav-link px-2 text-white" >Home</a></li>
+              <li><a href="Ссылка на автомобили" class="nav-link px-2 text-white">Cars</a></li>
+              <li><a href="{% url 'aboutUsPage' %}" class="nav-link px-2 text-white">About-us</a></li>
+            </ul>
+    
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" onclick="window.location.href = '{% url 'registerUserPage' %}';" style = " border-color:aliceblue;background-color:  aliceblue;" class="btn btn-warning" >Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <section class="bg-position-top-center bg-repeat-0 pt-5" style="background-image: url(img/car-finder/home/hero-bg.png); background-size: 1920px 630px; background-color: black;">
+        <div class="container pt-5">
+          <div class="row pt-lg-4 pt-xl-5">
+            <div class="col-lg-4 col-md-5 pt-3 pt-md-4 pt-lg-5">
+                <br>
+                <br>
+                <br>
+              <h1 class="display-4 text-light pb-2 mb-4 me-md-n5">Easy way to find the right car</h1>
+              <p class="fs-lg text-light opacity-70">Our store is the leader in sales of BMW cars throughout the USA </p>
+            </div>
+            <div class="col-lg-8 col-md-7 pt-md-5"><img class="d-block mt-4 ms-auto" src="https://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-BMW-M2-Coupe-White-Car-PNG-Image.png" width="800" alt="Car"></div>
+          </div>
+        </div>
+        </section>
+        <h1 class="display-4 text-light pb-2 mb-4 me-md-n5"  style="background-color: #483D8B; text-align: center;" >A large selection of different car bodies</h1>
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2 g-md-4" style="background-color: #483D8B;">
+            <!-- Item-->
+            <div class="col">
+              <div class="card card-body card-light card-hover bg-transparent border-0 px-0 pt-0 text-center"><img class="d-block mx-auto mb-3" src="https://finder.createx.studio/img/car-finder/icons/sedan.svg" width="160" alt="Sedan"><a class="nav-link-light stretched-link fw-bold" >Sedan</a></div>
+            </div>
+            <!-- Item-->
+            <div class="col">
+              <div class="card card-body card-light card-hover bg-transparent border-0 px-0 pt-0 text-center"><img class="d-block mx-auto mb-3" src="https://finder.createx.studio/img/car-finder/icons/sport.svg" width="160" alt="SUV"><a class="nav-link-light stretched-link fw-bold" >Sport Coupe</a></div>
+            </div>
+            <!-- Item-->
+            <div class="col">
+              <div class="card card-body card-light card-hover bg-transparent border-0 px-0 pt-0 text-center"><img class="d-block mx-auto mb-3" src="https://finder.createx.studio/img/car-finder/icons/wagon.svg" width="160" alt="Wagon"><a class="nav-link-light stretched-link fw-bold" >Wagon</a></div>
+            </div>
+            <!-- Item-->
+            <div class="col">
+              <div class="card card-body card-light card-hover bg-transparent border-0 px-0 pt-0 text-center"><img class="d-block mx-auto mb-3" src="https://finder.createx.studio/img/car-finder/icons/crossover.svg" width="160" alt="Crossover"><a class="nav-link-light stretched-link fw-bold" >Crossover</a></div>
+            </div>
+            <!-- Item-->
+            <div class="col">
+              <div class="card card-body card-light card-hover bg-transparent border-0 px-0 pt-0 text-center"><img class="d-block mx-auto mb-3" src="https://finder.createx.studio/img/car-finder/icons/coupe.svg" width="160" alt="Coupe"><a class="nav-link-light stretched-link fw-bold">Coupe</a></div>
+            </div>
+        </div>
+        <div class="row" style="background-color: #483D8B;">
+            <div class="col-md-5 col-lg-4 offset-lg-1 pt-4 mt-2 pt-md-5 mt-md-3">
+              <div class="d-flex pb-4 pb-md-5 mb-2"><i class="bi bi-briefcase"></i>
+                <div class="text-md-end ps-3 ps-md-0 pe-md-3 order-md-1">
+                  <h3 class="h6 text-light mb-1">Over 1 Million Sales</h3>
+                  <p class="fs-sm text-light opacity-70 mb-0">That’s more than you’ll find on any other major online automotive marketplace in the USA.</p>
+                </div>
+              </div>
+              <div class="d-flex pb-4 pb-md-5 mb-2"><i class="fi-search lead text-primary mt-1 order-md-2"></i>
+                <div class="text-md-end ps-3 ps-md-0 pe-md-3 order-md-1">
+                  <h3 class="h6 text-light mb-1">Personalized Search</h3>
+                  <p class="fs-sm text-light opacity-70 mb-0">Our powerful search makes it easy to personalize your results so you only see the cars and features you care about.</p>
+                </div>
+              </div>
+              <div class="d-flex pb-4 pb-md-5 mb-2"><i class="fi-settings lead text-primary mt-1 order-md-2"></i>
+                <div class="text-md-end ps-3 ps-md-0 pe-md-3 order-md-1">
+                  <h3 class="h6 text-light mb-1">Non-Stop Innovation</h3>
+                  <p class="fs-sm text-light opacity-70 mb-0">Our team is constantly developing new features that make the process of buying and selling a car simpler.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 d-none d-md-block">
+                <div class="position-relative mx-auto h-100" style="max-width: 5rem; min-height: 26rem;">
+                    <div class="position-absolute top-0 start-50 translate-middle-x h-100 overflow-hidden"><img src="https://finder.createx.studio/img/car-finder/home/road-line.svg" width="2" alt="Road line"></div>
+                  <div class="rellax content-overlay pt-5" data-rellax-percentage="0.5" style="transform: translate3d(0px, 29px, 0px);"><img class="pt-3 mt-5" src="https://finder.createx.studio/img/car-finder/home/car.svg" alt="Car"></div>
+                </div>
+              </div>
+            <div class="col-md-5 col-lg-4 pt-md-5 mt-md-3">
+              <div class="d-flex pb-4 pb-md-5 mb-2"><i class="fi-info-circle lead text-primary mt-1"></i>
+                <div class="ps-3">
+                  <h3 class="h6 text-light mb-1">Valuable Insights</h3>
+                  <p class="fs-sm text-light opacity-70 mb-0">We provide free access to key info like dealer reviews, market value, price drops.</p>
+                </div>
+              </div>
+              <div class="d-flex pb-4 pb-md-5 mb-2"><i class="fi-users lead text-primary mt-1"></i>
+                <div class="ps-3">
+                  <h3 class="h6 text-light mb-1">Consumer-First Mentality</h3>
+                  <p class="fs-sm text-light opacity-70 mb-0">We focus on building the most transparent, trustworthy experience for our users, and we’ve proven that works for dealers, too.</p>
+                </div>
+              </div>
+              <div class="d-flex pb-4 pb-md-5 mb-2"><i class="fi-calculator lead text-primary mt-1"></i>
+                <div class="ps-3">
+                  <h3 class="h6 text-light mb-1">Online Car Appraisal</h3>
+                  <p class="fs-sm text-light opacity-70 mb-0">Specify the parameters of your car to form its market value on the basis of similar cars on Finder.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+</body>
+</html>

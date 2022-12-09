@@ -1,0 +1,16 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Зарегистрироваться
+{% endblock %}
+
+{% block content %}
+    <h1>Зарегистрироваться</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}<br>
+        {{ form.phoneNumber }}<br>
+        <button type="submit" class ="btn btn-succes">Зарегистрироваться</button>
+        <span>{{error}}</span>
+    </form>
+{% endblock %}
